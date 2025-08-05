@@ -1,0 +1,36 @@
+{
+  // See full docs: https://aka.ms/tsconfig
+  "compilerOptions": {
+    /* 📁  Directory paths */
+    "rootDir": "./src",          // where your .ts files live
+    "outDir": "./dist",          // where tsc will emit .js/.d.ts
+
+    /* 🌍  Runtime / module system */
+    "target": "ES2022",          // features supported natively by Node 14+
+    "module": "commonjs",        // matches Node's default resolver
+    "moduleResolution": "node",
+    "esModuleInterop": true,     // allows `import express from "express"`
+    "resolveJsonModule": true,
+
+    /* 🏷  Types & libs */
+    "lib": ["ES2022"],           // ← Changed from ES2019 to ES2022
+    "types": ["node"],           // pull in Node's global typings
+
+    /* 🗺  Build artefacts */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* 🔒  Stricter type-safety */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* ⚙️  Misc */
+    "skipLibCheck": true
+  },
+
+  /* 🎯  Tell tsc what to compile */
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
